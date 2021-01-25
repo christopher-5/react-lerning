@@ -1,14 +1,18 @@
-import React from "react";
-import styles from "./Column.scss";
-import PropTypes from "prop-types";
-import Creator from "../Creator/Creator";
-import { settings } from "../../data/dataStore";
-import Card from "../Card/Card";
-import Icon from "./Icon";
+import React from 'react';
+import styles from './Column.scss';
+import PropTypes from 'prop-types';
+import Creator from '../Creator/Creator';
+import { settings } from '../../data/dataStore';
+import Card from '../Card/Card';
+import Icon from './Icon';
 
 class Column extends React.Component {
   state = {
     cards: this.props.cards || [],
+  };
+
+  static propTypes = {
+    cards: PropTypes.node.isRequired,
   };
 
   addCard(title) {
@@ -20,7 +24,7 @@ class Column extends React.Component {
             ? state.cards[state.cards.length - 1].key + 1
             : 0,
           title,
-          icon: "list-alt",
+          icon: 'list-alt',
           cards: [],
         },
       ],
