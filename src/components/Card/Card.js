@@ -14,6 +14,7 @@ class Card extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
   };
+  
 }
 
 export default Card;
