@@ -8,7 +8,7 @@ import Icon from './Icon';
 
 class Column extends React.Component {
   static propTypes = {
-    cards: PropTypes.node.isRequired,
+    
     addCard: PropTypes.func,
   };
 
