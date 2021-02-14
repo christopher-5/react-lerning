@@ -12,7 +12,7 @@ export const CHANGE = createActionName('CHANGE');
 
 export const getSearchString = (state) => state.searchString;
 
-export const createActionSendString = (payload) => ({ payload: payload , type: CHANGE });
+export const createAction_changeSearchString = (payload) => ({ payload: payload , type: CHANGE });
 
 export const countAllCards = ({cards}) => cards.length;
 
