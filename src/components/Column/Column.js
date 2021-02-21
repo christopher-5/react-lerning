@@ -8,7 +8,6 @@ import Icon from './Icon';
 
 class Column extends React.Component {
   static propTypes = {
-    
     addCard: PropTypes.func,
   };
 
@@ -32,10 +31,7 @@ class Column extends React.Component {
           ))}
         </div>
 
-        <Creator
-          text={settings.columnCreatorText}
-          action={addCard}
-        />
+        <Creator text={settings.columnCreatorText} action={addCard} />
       </section>
     );
   }
