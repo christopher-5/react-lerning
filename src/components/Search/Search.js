@@ -6,6 +6,7 @@ import { settings } from '../../data/dataStore';
 import Icon from '../Column/Icon';
 import Container from '../Container/Container';
 import { withRouter } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 class Search extends React.Component {
   static propTypes = {
@@ -55,9 +56,11 @@ class Search extends React.Component {
             onChange={(event) => this.handleChange(event)}
           />
           <div className={styles.buttons}>
-            <Button onClick={() => this.handleOK()}>
-              <Icon name={icon} />
-            </Button>
+            <NavLink exact to={`/search/${this.state.value}`}>
+              <Button onClick={() => this.handleOK()}>
+                <Icon name={icon} />
+              </Button>
+            </NavLink>
           </div>
           <div>
             {countVisible == countAll ? '' : `${countVisible} / ${countAll}`}

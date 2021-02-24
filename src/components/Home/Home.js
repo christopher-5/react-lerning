@@ -1,6 +1,5 @@
 import React from 'react';
 import ListLink from '../ListLink/ListLink';
-import SearchResults from '../SearchResults/SearchResults';
 import styles from './Home.scss';
 import { PropTypes } from 'prop-types';
 
@@ -20,7 +19,6 @@ class Home extends React.Component {
         {lists.map((listData) => (
           <ListLink key={listData.id} {...listData} />
         ))}
-        <SearchResults></SearchResults>
       </main>
     );
   }
