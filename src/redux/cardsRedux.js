@@ -22,3 +22,5 @@ export default function reducer(statePart = [], action = {}) {
       return statePart;
   }
 }
+
+export const getSearchString = (state) => state.searchString;
